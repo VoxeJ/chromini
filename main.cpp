@@ -11,15 +11,15 @@ using namespace std;
 void showHelp(){
     cout 
         << "Help:" << endl
-        << "chromini [1] [2] [3] [4] [5] [6] [7]" << endl
+        << "chromini <max_colors> <learning_portion> <difference_threshold> <sameness_threshold> <learning_rate> <input> <output>" << endl
         << "ONLY OPAQUE PNG FILES ARE SUPPORTED" << endl
-        << "[1] - maximum amount of colours ([1; 256] as PLT; >256 for SRGB)" << endl
-        << "[2] - percent of the image to learn from [1; 100]" << endl
-        << "[3] - difference threshold percentage. Specifies how different two colours should be to be considered unique" << endl
-        << "[4] - sameness threshold percentage. Specifies how different two colours should be to be considered same for removal" << endl
-        << "[5] - colour learning rate" << endl
-        << "[6] - path to input file" << endl
-        << "[7] - path to output file";
+        << "max_colors - maximum amount of colours ([1; 256] as PLT; >256 for SRGB)" << endl
+        << "learning_portion - percent of the image to learn from [1; 100]" << endl
+        << "difference_threshold - difference threshold percentage. Specifies how different two colours should be to be considered unique" << endl
+        << "sameness_threshold - sameness threshold percentage. Specifies how different two colours should be to be considered same for removal" << endl
+        << "learning_rate - colour learning rate" << endl
+        << "input - path to input file" << endl
+        << "output - path to output file";
 }
 
 int main(int argc, char* argv[])

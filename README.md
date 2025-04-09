@@ -28,18 +28,18 @@ To use Chromini, you need to have a C++ compiler installed on your system. The p
 Chromini can be run from the command line with the following syntax:
 
 ```sh
-chromini [1] [2] [3] [4] [5] [6] [7]
+chromini <max_colors> <learning_portion> <difference_threshold> <sameness_threshold> <learning_rate> <input> <output>
 ```
 
 ### Parameters
 
-1. **Maximum Amount of Colors**: Specifies the maximum number of colors in the palette. Range: [1; 256] for PLT, >256 for SRGB.
-2. **Percent of Image to Learn From**: Specifies the percentage of the image to learn from. Range: [1; 100].
-3. **Difference Threshold Percentage**: Specifies how different two colors should be to be considered unique.
-4. **Sameness Threshold Percentage**: Specifies how different two colors should be to be considered the same for duplicate removal.
-5. **Color Learning Rate**: Specifies the rate at which colors are learned.
-6. **Path to Input File**
-7. **Path to Output File**
+- **max_colors**: Specifies the maximum number of colors in the palette. Range: [1; 256] for PLT, >256 for SRGB.
+- **learning_portion**: Specifies the percentage of the image to learn from. Range: [1; 100].
+- **difference_threshold**: Specifies how different two colors should be to be considered unique Range: [1; 100].
+- **sameness_threshold**: Specifies how different two colors should be to be considered the same for duplicate removal Range: [1; 100].
+- **learning_rate**: Specifies the rate at which colors are learned.
+- **input**: Path to input file
+- **output**: Path to output file
 
 ### Example
 
