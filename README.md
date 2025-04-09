@@ -27,7 +27,9 @@ To use Chromini, you need to have a C++ compiler installed on your system. The p
 
 Chromini can be run from the command line with the following syntax:
 
+```sh
 chromini [1] [2] [3] [4] [5] [6] [7]
+```
 
 ### Parameters
 
