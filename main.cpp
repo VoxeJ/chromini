@@ -15,9 +15,9 @@ void showHelp(){
         << "ONLY OPAQUE PNG FILES ARE SUPPORTED" << endl
         << "max_colors - maximum amount of colours ([1; 256] as PLT; >256 for SRGB)" << endl
         << "learning_portion - percent of the image to learn from [1; 100]" << endl
-        << "difference_threshold - difference threshold percentage. Specifies how different two colours should be to be considered unique" << endl
-        << "sameness_threshold - sameness threshold percentage. Specifies how different two colours should be to be considered same for removal" << endl
-        << "learning_rate - colour learning rate" << endl
+        << "difference_threshold - difference threshold percentage. Specifies how different two colours should be to be considered unique [1; 100]" << endl
+        << "sameness_threshold - sameness threshold percentage. Specifies how different two colours should be to be considered same for removal [1; 100]" << endl
+        << "learning_rate - colour learning rate [0; 1]" << endl
         << "input - path to input file" << endl
         << "output - path to output file";
 }
@@ -50,12 +50,12 @@ int main(int argc, char* argv[])
             return 0;
         }
         samenessPercentage = atof(argv[3]);
-        if((samenessPercentage < 0) || (samenessPercentage > 100)){
+        if((samenessPercentage < 1.0) || (samenessPercentage > 100)){
             showHelp();
             return 0;
         }
         learningRate = atof(argv[5]);
-        if(learningRate <= 0){
+        if(learningRate <= 0) || (learningRate > 1){
             showHelp();
             return 0;
         }

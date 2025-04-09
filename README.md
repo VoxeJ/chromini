@@ -35,9 +35,9 @@ chromini <max_colors> <learning_portion> <difference_threshold> <sameness_thresh
 
 - **max_colors**: Specifies the maximum number of colors in the palette. Range: [1; 256] for PLT, >256 for SRGB.
 - **learning_portion**: Specifies the percentage of the image to learn from. Range: [1; 100].
-- **difference_threshold**: Specifies how different two colors should be to be considered unique Range: [1; 100].
+- **difference_threshold**: Specifies how different two colors should be to be considered unique. Range: [1; 100].
 - **sameness_threshold**: Specifies how different two colors should be to be considered the same for duplicate removal Range: [1; 100].
-- **learning_rate**: Specifies the rate at which colors are learned.
+- **learning_rate**: Specifies the rate at which colors are learned. Range: [0; 1].
 - **input**: Path to input file
 - **output**: Path to output file
 
